@@ -2,7 +2,8 @@
     <!-- Base application theme. -->
     <style name="Base.Theme.Tips_calculator" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your light theme here. -->
-        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        <item name="colorPrimary">@color/darkblue</item>
+
     </style>
 
     <style name="Theme.Tips_calculator" parent="Base.Theme.Tips_calculator" />

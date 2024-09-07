@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.ContextCompat
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.example.tips_calculator.databinding.ActivityMainBinding
@@ -25,7 +26,7 @@ class MainActivity : AppCompatActivity() {
             insets
 
         }
-
+        window.statusBarColor = ContextCompat.getColor(this, R.color.darkblue)
 
         var percentage = 0
         binding.btnOp1.setOnCheckedChangeListener { _, isChecked ->
@@ -45,7 +46,7 @@ class MainActivity : AppCompatActivity() {
         binding.btnCalculate.setOnClickListener {
             val totalTableTemp = binding.tieTotal.text
             val totalPeopleTemp = binding.tiePeople.text
-            if (totalPeopleTemp?.isEmpty() == true || totalPeopleTemp?.isEmpty() == true
+            if (totalPeopleTemp?.isEmpty() == true || totalTableTemp?.isEmpty() == true
             ) {
                 Snackbar
                     .make(binding.tieTotal, "Fill in all empty fields", Snackbar.LENGTH_LONG)
@@ -59,8 +60,8 @@ class MainActivity : AppCompatActivity() {
                 val totalTemp = totalPrice / totalPeople
                 val tips = totalTemp * percentage / 100
                 val totalWithTips = totalTemp + tips
-                binding.tvResult.text = "Total with tips: $totalWithTips"
-                println("Total is:" + totalWithTips)
+                binding.tvResult.text = "The total amount per person is: $totalWithTips"
+
             }
         }
 
