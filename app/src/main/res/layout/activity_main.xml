@@ -37,14 +37,17 @@
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_margin="16dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_subtitle" >
+        app:layout_constraintTop_toBottomOf="@+id/tv_subtitle"
+        >
 
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/tie_total"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="numberDecimal"
-            android:text="Insert the total of the bill"
+            android:hint="Insert the total of the bill"
+
             />
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -57,14 +60,17 @@
         android:layout_margin="16dp"
         app:layout_constraintStart_toStartOf="parent"
         app:counterMaxLength="2"
-        app:layout_constraintTop_toBottomOf="@+id/ti_total">
+        app:layout_constraintTop_toBottomOf="@+id/ti_total"
+        >
 
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/tie_people"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="numberDecimal"
-            android:text="Insert the total amount of people" />
+            android:hint="Insert the total amount of people"
+             />
 
 
     </com.google.android.material.textfield.TextInputLayout>
